@@ -5,14 +5,13 @@
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.zjzcn</groupId>
+    <groupId>com.xiaoya.infra</groupId>
     <artifactId>esbatis</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>esbatis</name>
     <description>The Elasticsearch mapper framework</description>
-    <url>https://github.com/zjzcn/esbatis</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -106,7 +105,7 @@
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <artifactSet>
                                 <includes>
-                                    <include>com.github.esbatis:esbatis</include>
+                                    <include>com.xiaoya.infra.esbatis:esbatis</include>
                                     <include>org.mvel:mvel2</include>
                                     <include>com.alibaba:fastjson</include>
                                     <include>com.squareup.okhttp3:okhttp</include>
@@ -116,19 +115,19 @@
                             <relocations>
                                 <relocation>
                                     <pattern>org.mvel2</pattern>
-                                    <shadedPattern>com.github.esbatis.mvel2</shadedPattern>
+                                    <shadedPattern>com.xiaoya.infra.esbatis.mvel2</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>com.alibaba.fastjson</pattern>
-                                    <shadedPattern>com.github.esbatis.fastjson</shadedPattern>
+                                    <shadedPattern>com.xiaoya.infra.esbatis.fastjson</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>okhttp3</pattern>
-                                    <shadedPattern>com.github.esbatis.okhttp3</shadedPattern>
+                                    <shadedPattern>com.xiaoya.infra.esbatis.okhttp3</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>okio</pattern>
-                                    <shadedPattern>com.github.esbatis.okio</shadedPattern>
+                                    <shadedPattern>com.xiaoya.infra.esbatis.okio</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>

@@ -1,0 +1,34 @@
+package com.xiaoya.infra.esbatis.parser.nodes;
+
+import com.xiaoya.infra.esbatis.parser.DynamicContext;
+
+import java.util.List;
+
+/**
+ * @Description:
+ * @Author: zhuzhongji
+ * @Date: 2019/5/7 18:32
+ */
+public class ChooseNode implements XmlNode {
+    private final XmlNode defaultNode;
+    private final List<XmlNode> ifSqlNodes;
+
+    public ChooseNode(List<XmlNode> ifNodes, XmlNode defaultNode) {
+        this.ifSqlNodes = ifNodes;
+        this.defaultNode = defaultNode;
+    }
+
+    @Override
+    public boolean apply(DynamicContext context) {
+        for (XmlNode sqlNode : ifSqlNodes) {
+            if (sqlNode.apply(context)) {
+                return true;
+            }
+        }
+        if (defaultNode != null) {
+            defaultNode.apply(context);
+            return true;
+        }
+        return false;
+    }
+}
