@@ -2,8 +2,8 @@
 <mapper namespace="com.github.esbatis.test.DemoUserDao">
     <index id="index" method="put" url="demo1/demouser/${demoUser.id}">
         {
-            "id" : ${demo.id},
-            "age" : ${demo.age}
+            "id" : ${demoUser.id},
+            "age" : ${demoUser.age}
         }
     </index>
 

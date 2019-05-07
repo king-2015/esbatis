@@ -25,8 +25,8 @@ public class SpringTest {
 
         demoDao.update();
 
-        boolean b = demoDao.bulk();
-        System.out.println(b);
+//        boolean b = demoDao.bulk();
+//        System.out.println(b);
 
         List<Demo> list = demoDao.mget();
         System.out.println(JSON.toJSON(list));

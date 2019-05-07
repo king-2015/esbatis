@@ -26,8 +26,8 @@ public class DemoUserTest {
 
         demoUserDao.update();
 
-        boolean b = demoUserDao.bulk();
-        System.out.println(b);
+//        boolean b = demoUserDao.bulk();
+//        System.out.println(b);
 
         List<Demo> list = demoUserDao.mget();
         System.out.println(JSON.toJSON(list));

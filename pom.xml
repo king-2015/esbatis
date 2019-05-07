@@ -7,7 +7,7 @@
 
     <groupId>com.github.zjzcn</groupId>
     <artifactId>esbatis</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>esbatis</name>
@@ -49,7 +49,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.3.10.RELEASE</version>
+            <version>5.0.8.RELEASE</version>
             <scope>provided</scope>
         </dependency>
 
