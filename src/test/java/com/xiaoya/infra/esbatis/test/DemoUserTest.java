@@ -1,7 +1,10 @@
 package com.xiaoya.infra.esbatis.test;
 
 import com.alibaba.fastjson.JSON;
+import com.xiaoya.infra.esbatis.client.RestClient;
+import com.xiaoya.infra.esbatis.mapper.MapperFactory;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -63,5 +66,21 @@ public class DemoUserTest {
         demoUser.setAge(14);
         demoUser.setGender("女");
         demoUserDao.insertDemoUser(demoUser);
+    }
+
+    @Autowired
+    private MapperFactory mapperFactory;
+
+    @Test
+    public void test5() {
+//        MapperFactory mapperFactory = new MapperFactory();
+//        mapperFactory.setRestClient(new RestClient("http://39.98.66.133/es-node01/"));
+//        mapperFactory.addResource("mapper/DemoUserDao.xml");
+
+        DemoUserDao demoUserDao = mapperFactory.getMapper(DemoUserDao.class);
+        DemoUser demoUser = new DemoUser();
+        demoUser.setId(2L);
+
+        demoUserDao.findDemoUser(2L);
     }
 }
